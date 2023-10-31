@@ -1,24 +1,63 @@
-# README
+# StubSnap
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 画面遷移図
+https://www.figma.com/file/HSm5kiAZGlAudneCxbcfVR/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=0%3A1&mode=design&t=cqW90vAgFU9xr06F-1
 
-Things you may want to cover:
+## サービス概要
+StubSnapは美術館、映画やコンサート等、思い出に残したいあらゆるチケットの半券を記録保存できるサービスです。
 
-* Ruby version
+## 想定されるユーザー層
+以下のような趣味を持ちチケットの半券を思い出に残したい方
+- 旅行好きの方
+- アートが好きで美術館や展覧会等に行く方
+- エンターテイメントが好きで音楽コンサートや映画鑑賞に行く方
 
-* System dependencies
+## サービスコンセプト
+チケットの半券は大切な思い出の一つです。
+海外旅行で訪れた美術館、大好きなアーティストのコンサートやデートで観た映画など、
+チケットの半券は私たちの日常を彩る出来事の記録や記念と言えるでしょう。
 
-* Configuration
+でも紙の半券をスクラップしてノートに貼るのは手間がかかるし、デジタルチケット
+はメールだったりアプリだったりバラバラで、使い終わった後はもうスマホのどこにあるかわかりませんよね？
 
-* Database creation
+StubSnapはそんな管理が大変だけど思い出に残しておきたいチケットの半券をまとめて簡単に管理、
+また他のユーザーに共有もできるプラットフォームの提供を目指しています。
 
-* Database initialization
+## 実装を予定している機能
+### MVP
+- 会員登録機能
+- Sorceryによるログイン・ログアウト機能
+- Googleアカウントログイン・ログアウト
+- ゲストログイン（閲覧のみ）
+- プロフィール機能（編集）
+- 半券一覧、詳細表示機能
+- 半券投稿機能
+- 半券公開先設定機能（パブリック or プライベート）
+- 半券編集機能
+- 半券削除機能
+- カテゴリ投稿機能
+- カテゴリ編集機能
+- カテゴリ削除機能
+- いいね機能
+- いいね解除機能
+- マルチ検索・オートコンプリート（カテゴリ）
+- Twitter 共有機能
+- テスト機能
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### その後の機能
+* Google Maps API　を使用した位置情報入力機能
+* GoogleCloudVisionAPI の TextDetection　を使った画像認識機能（チケット半券情報の取得）
 
-* Deployment instructions
+## 使用技術・ライブラリ（予定）
+- Ruby 3.2.2
+- Rails 7.0.6
+- ImageMagick
+- Sorcery
+- HTML
+- CSS tailwind
+- Webアプリケーションサーバ fly.io
+- データベース PostgreSQL
 
-* ...
+## ER図
+[![Image from Gyazo](https://i.gyazo.com/5a23fa42073ee3560ff5f6a86583c398.png)](https://gyazo.com/5a23fa42073ee3560ff5f6a86583c398)
