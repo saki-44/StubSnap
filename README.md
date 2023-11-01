@@ -60,4 +60,4 @@ StubSnapはそんな管理が大変だけど思い出に残しておきたいチ
 - データベース PostgreSQL
 
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/5a23fa42073ee3560ff5f6a86583c398.png)](https://gyazo.com/5a23fa42073ee3560ff5f6a86583c398)
+<a href="https://gyazo.com/0e96b0f8de315924347d7916022c4e5f"><img src="https://i.gyazo.com/0e96b0f8de315924347d7916022c4e5f.png" alt="Image from Gyazo" width="718"/></a>
