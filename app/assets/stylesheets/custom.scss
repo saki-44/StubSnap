@@ -1,0 +1,42 @@
+@import "bootstrap";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+header {
+  width: 100%;
+  height: 80px; /* 任意の高さ */
+  background-color: #a7c9ef; /* 任意の背景色 */
+  position: fixed;
+  top: 0;
+  z-index: 1000; /* 必要に応じて他の要素よりも前面に表示するために設定 */
+  /* 他のスタイルプロパティを追加しても構いません */
+}
+
+footer {
+  width: 100%;
+  height: 50px; /* 任意の高さ */
+  background-color: #a7c9ef; /* 任意の背景色 */
+  position: fixed;
+  bottom: 0;
+  z-index: 1000; /* 必要に応じて他の要素よりも前面に表示するために設定 */
+  /* フッターのスタイル設定 */
+  /* 例: 背景色、高さ、余白、テキストスタイルなど */
+}
