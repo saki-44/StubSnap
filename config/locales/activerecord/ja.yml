@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      stub: '半券'
+    attributes:
+      user:
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+        name: '名前'
+        sns: 'ソーシャルメディア'
