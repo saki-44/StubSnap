@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_03_213905) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_06_214413) do
+  create_table "categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stubs", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "address"
+    t.text "memo"
+    t.boolean "public", default: false, null: false
+    t.integer "user_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_stubs_on_category_id"
+    t.index ["user_id"], name: "index_stubs_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -30,4 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_03_213905) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
   end
 
+  add_foreign_key "stubs", "categories"
+  add_foreign_key "stubs", "users"
 end
