@@ -4,14 +4,22 @@ ja:
     register: '登録'
     logout: 'ログアウト'
   users:
+    create:
+      success: 'ユーザー登録が完了しました'
+      fail: 'ユーザー登録に失敗しました'
     new:
       title: 'ユーザー登録'
       to_login_page: 'ログインページへ'
   user_sessions:
+    create:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
     new:
       title: 'ログイン'
       to_register_page: '登録ページへ'
       password_forget: 'パスワードをお忘れの方はこちら'
+    destroy:
+      success: 'ログアウトしました'
   stubs:
     index:
       title: '半券一覧'
