@@ -3,6 +3,8 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    message:
+      require_login: 'ログインして下さい'
   users:
     create:
       success: 'ユーザー登録が完了しました'
@@ -23,6 +25,7 @@ ja:
   stubs:
     index:
       title: '半券一覧'
+      no_result: '半券がありません'
     new:
       title: '半券登録'
     likes:
