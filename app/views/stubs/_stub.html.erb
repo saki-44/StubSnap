@@ -1,0 +1,23 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="stub-id-<%= stub.id %>">
+    <div class="card">
+      <%= image_tag 'stub_sample.jpg', class: 'card-img-top', size: '250x250' %>
+      <div class="card-body">
+        <h5 class="card-title">
+          <a href="#">
+            <%= stub.title %>
+          </a>
+        </h5>
+        <div class='mr10 float-right'>
+         <a href="#" class="pr-1"><%= "trash" %></a>
+          <a href="#"><%= "pen" %></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <%= l stub.created_at, format: :long %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
