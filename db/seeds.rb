@@ -7,6 +7,11 @@
   )
 end
 
+Category.create(name: "Museum")
+Category.create(name: "Music Concert")
+Category.create(name: "Transportation")
+Category.create(name: "Others")
+
 5.times do |index|
   Stub.create!(
       user: User.offset(rand(User.count)).first,
