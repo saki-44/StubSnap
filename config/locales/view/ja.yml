@@ -5,6 +5,8 @@ ja:
     logout: 'ログアウト'
     message:
       require_login: 'ログインして下さい'
+      created: "%{item}を登録しました"
+      not_created: "%{item}を登録できませんでした"
   users:
     create:
       success: 'ユーザー登録が完了しました'
@@ -25,7 +27,7 @@ ja:
   stubs:
     index:
       title: '半券一覧'
-      no_result: '半券がありません'
+      no_result: '登録した半券がありません'
     new:
       title: '半券登録'
     likes:

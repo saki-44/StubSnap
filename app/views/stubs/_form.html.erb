@@ -1,0 +1,23 @@
+<%= form_with model: stub, data: { turbo: false } do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :memo %>
+    <%= f.text_area :memo, class: 'form-control', rows: 5 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :category_id, "カテゴリ" %>
+    <%= f.collection_select(:category_id, @categories, :id, :name, { prompt: "Select category"}, { class: 'form-control'}) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :public %>
+    <%= f.check_box :public %>
+  </div>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
