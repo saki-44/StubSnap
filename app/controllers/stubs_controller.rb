@@ -10,6 +10,7 @@ class StubsController < ApplicationController
 
   def create
     @stub = current_user.stubs.build(stub_params)
+    @categories = Category.all
     if @stub.save
       redirect_to stubs_path, success: t('defaults.message.created', item: Stub.model_name.human)
     else
