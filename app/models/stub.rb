@@ -1,4 +1,5 @@
 class Stub < ApplicationRecord
+  mount_uploader :stub_image, StubImageUploader
   belongs_to :user
   belongs_to :category
 

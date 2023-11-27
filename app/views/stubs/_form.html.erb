@@ -1,24 +1,38 @@
 <%= form_with model: stub, data: { turbo: false } do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :address %>
-    <%= f.text_field :address, class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :memo %>
-    <%= f.text_area :memo, class: 'form-control', rows: 5 %>
-  </div>
-  <div class="form-group">
-    <%= f.label :category_id, "カテゴリ" %>
-    <%= f.collection_select(:category_id, @categories, :id, :name, { prompt: "Select category"}, { class: 'form-control'}) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :public %>
-    <%= f.check_box :public %>
+  <div class="row g-3">
+    <div class="form-group">
+      <%= f.label :stub_image %>
+      <%= f.file_field :stub_image, class: 'form-control mb-3', accept: 'image/*' %>
+      <%= f.hidden_field :stub_image_cache %>
+    </div>
+    <div class='mt-3 mb-3'>
+      <%= image_tag stub.stub_image.url,
+                    id: 'preview',
+                    size: '300x200' %>
+    </div>
+
+    <div class="col-md-6">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="col-md-6">
+      <%= f.label :address %>
+      <%= f.text_field :address, class: 'form-control' %>
+    </div>
+    <div class="col-md-6">
+      <%= f.label :memo %>
+      <%= f.text_area :memo, class: 'form-control', rows: 5 %>
+    </div>
+    <div class="col-md-6">
+      <%= f.label :category_id, "カテゴリ" %>
+      <%= f.collection_select(:category_id, @categories, :id, :name, { prompt: "Select category"}, { class: 'form-control'}) %>
+    </div>
+    <div class="col-md-6">
+      <%= f.label :public %>
+      <%= f.check_box :public %>
+    </div>
   </div>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>

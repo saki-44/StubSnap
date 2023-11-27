@@ -53,10 +53,12 @@ gem 'sorcery'
 # Bootstrap framework version 5.2.3.
 gem 'bootstrap', '~> 5.3', '>= 5.3.1'
 gem 'bootstrap_form'
-
+gem 'carrierwave'
 gem 'rails-i18n'
 
 gem 'pry'
+
+
 
 group :development, :test do
 
