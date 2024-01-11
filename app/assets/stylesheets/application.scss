@@ -6,3 +6,11 @@
   font-size: 3em;
 }
 
+.card-img-top {
+  padding: 10px; /* 余白を10px追加 */
+  object-fit: contain; /* 画像のアスペクト比を保ちつつ枠に収める */
+}
+
+.add-stub {
+  margin-bottom: 20px; 
+}

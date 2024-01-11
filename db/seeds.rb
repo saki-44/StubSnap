@@ -12,12 +12,12 @@ Category.create(name: "Music Concert")
 Category.create(name: "Transportation")
 Category.create(name: "Others")
 
-5.times do |index|
-  Stub.create!(
-      user: User.offset(rand(User.count)).first,
-      title: "タイトル#{index}",
-      memo: "メモ#{index}",
-      category: Category.offset(rand(Category.count)).first,
-      public: rand(2).even?
-  )
-end
+#5.times do |index|
+  #Stub.create!(
+      #user: User.offset(rand(User.count)).first,
+      #title: "タイトル#{index}",
+      #memo: "メモ#{index}",
+      #category: Category.offset(rand(Category.count)).first,
+      #public: rand(2).even?
+  #)
+#end

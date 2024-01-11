@@ -26,6 +26,6 @@ class StubsController < ApplicationController
   private
 
   def stub_params
-    params.require(:stub).permit(:title, :address, :memo, :public, :category_id)
+    params.require(:stub).permit(:title, :address, :memo, :public, :category_id, :stub_image, :stub_image_cache)
   end
 end
