@@ -15,7 +15,7 @@ function previewFileWithId(id) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("turbo:load", function() {
   const fileInput = document.querySelector('input[type="file"]');
   if (fileInput) {
     fileInput.addEventListener('change', function() {
