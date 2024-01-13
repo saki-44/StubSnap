@@ -53,7 +53,10 @@ gem 'sorcery'
 # Bootstrap framework version 5.2.3.
 gem 'bootstrap', '~> 5.3', '>= 5.3.1'
 gem 'bootstrap_form'
+gem "aws-sdk-s3", require: false
 gem 'carrierwave'
+gem 'fog-aws'
+
 gem 'rails-i18n'
 
 gem 'pry'
