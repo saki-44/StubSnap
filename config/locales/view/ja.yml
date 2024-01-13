@@ -35,3 +35,18 @@ ja:
   profiles:
     show:
       title: 'プロフィール'
+  categories:
+    museum: "美術館、博物館"
+    exhibition: "展示会"
+    movie: "映画"
+    theater: "ミュージカル、舞台"
+    concert: "音楽コンサート"
+    transportation: "交通機関"
+    event: "イベント"
+    other: "その他"
+  forms:
+    labels:
+      category: "カテゴリ"
+    prompts:
+      select_category: "カテゴリを選択してください"
+
