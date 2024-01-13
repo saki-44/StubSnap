@@ -18,4 +18,5 @@ CarrierWave.configure do |config|
       region: 'us-west-2',   # アジアパシフィック(東京)を選択した場合
       path_style: true
     }
+  end
 end
