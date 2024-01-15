@@ -7,7 +7,7 @@
       <div class="card-body">
         <h5 class="card-title">
           <%= stub.title %>
-          <%= render 'crud_menus', stub: stub %>
+          <%= render 'crud_menus', stub: stub if current_user.own?(stub) %>
         </h5>
         <ul class="list-inline">
           <li class="list-inline-item">
