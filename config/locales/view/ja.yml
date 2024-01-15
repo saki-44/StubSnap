@@ -28,6 +28,7 @@ ja:
     index:
       title: '半券一覧'
       no_result: '登録した半券がありません'
+      date: '日付'
     new:
       title: '半券登録'
     likes:

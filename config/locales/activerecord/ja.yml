@@ -14,5 +14,6 @@ ja:
         title: 'タイトル'
         address: '場所'
         memo: 'メモ'
-        public: '公開'
+        public: '公開する'
         stub_image: '半券画像'
+        date: '日付'

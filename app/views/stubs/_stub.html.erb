@@ -7,16 +7,19 @@
           <a href="#">
             <%= stub.title %>
           </a>
+          <div class='float-end'>
+            <a href="#" class="bi bi-pencil-fill" style="margin-right: 10px;"></a>
+            <a href="#" class="bi bi-trash-fill"></a>
+          </div>
         </h5>
-        <div class='mr10 float-right'>
-          <a href="#" class="pr-1"><%= "trash" %></a>
-          <a href="#"><%= "pen" %></a>
-        </div>
         <ul class="list-inline">
           <li class="list-inline-item">
-            <%= l stub.created_at, format: :long %>
+            日付：<%= l stub.date %>
           </li>
         </ul>
+          <li class="float-end list-inline-item small text-muted">
+            投稿日時：<%= l stub.created_at, format: :long %>
+          </li>
       </div>
     </div>
   </div>
