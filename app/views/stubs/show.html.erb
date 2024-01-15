@@ -8,7 +8,7 @@
         <div class="col-md-6 text-decoration-underline">
             <div class="mb-3">
                 <div class="display-5 fw-bolder fs-2"><%= @stub.title %>
-                <%= render 'crud_menus', stub: @stub %></div>
+                <%= render 'crud_menus', stub: @stub if current_user.own?(@stub) %></div>
             </div>
             <div class="mb-3">
                 <p>Date:<%= @stub.date %></p>

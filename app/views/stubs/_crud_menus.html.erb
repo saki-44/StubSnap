@@ -1,9 +1,9 @@
 <div class="d-flex float-end">
-  <%= link_to "#", id: "button-edit-#{stub.id}" do %>
-    <div class="bi bi-pencil-fill"></div>
+  <%= link_to edit_stub_path(stub), id: "button-edit-#{stub.id}" do %>
+    <i class="bi bi-pencil-fill"></i>
   <% end %>
   <div class="ms-3"></div>
-  <%= link_to "#", id: "button-delete-#{stub.id}" do %>
-    <div class="bi bi-trash-fill"></div>
+  <%= link_to stub_path(stub), id: "button-delete-#{stub.id}", method: :delete, data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete } do %>
+    <i class="bi bi-trash-fill"></i>
   <% end %>
 </div>
