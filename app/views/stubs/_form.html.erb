@@ -16,14 +16,14 @@
       <%= f.label :title %>
       <%= f.text_field :title, class: 'form-control' %>
     </div>
+    <div class="col-md-6">
+      <%= f.label :date %>
+      <%= f.date_field :date, class: 'form-control' %>
+    </div>
 
     <div class="col-md-6">
       <%= f.label :address %>
       <%= f.text_field :address, class: 'form-control' %>
-    </div>
-    <div class="col-md-6">
-      <%= f.label :memo %>
-      <%= f.text_area :memo, class: 'form-control', rows: 5 %>
     </div>
     <div class="col-md-6">
       <%= f.label :category_id, I18n.t('forms.labels.category') %>
@@ -33,9 +33,13 @@
       { class: 'form-control' } %>
     </div>
     <div class="col-md-6">
+      <%= f.label :memo %>
+      <%= f.text_area :memo, class: 'form-control', rows: 6 %>
+    </div>
+    <div class="col-md-6">
       <%= f.label :public %>
       <%= f.check_box :public %>
     </div>
+      <%= f.submit class: 'btn btn-primary' %>
   </div>
-  <%= f.submit class: 'btn btn-primary' %>
 <% end %>

@@ -1,22 +1,28 @@
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="stub-id-<%= stub.id %>">
     <div class="card">
-      <%= image_tag stub.stub_image_url, class: 'card-img-top', size: '100x300' %>
+      <%= link_to stub_path(stub) do %>
+        <%= image_tag stub.stub_image_url, class: 'card-img-top', size: '100x300' %>
+      <% end %>
       <div class="card-body">
         <h5 class="card-title">
-          <a href="#">
-            <%= stub.title %>
-          </a>
+          <%= stub.title %>
+          <%= render 'crud_menus', stub: stub %>
         </h5>
-        <div class='mr10 float-right'>
-          <a href="#" class="pr-1"><%= "trash" %></a>
-          <a href="#"><%= "pen" %></a>
-        </div>
         <ul class="list-inline">
           <li class="list-inline-item">
-            <%= l stub.created_at, format: :long %>
+            日付：<%= stub.date %>
+          </li>
+          <li class="list-inline-item float-end">
+            <%= I18n.t('categories.' + stub.category.name) %>
           </li>
         </ul>
+        <li class="list-inline-item">
+          <%= stub.user.name %>
+        </li>
+        <li class="float-end list-inline-item small text-muted">
+          登録日：<%= stub.created_at.strftime("%Y-%m-%d") %>
+        </li>
       </div>
     </div>
   </div>

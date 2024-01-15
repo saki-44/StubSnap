@@ -1,0 +1,30 @@
+<section class="py-5">
+  <div class="container px-4 px-lg-5 my-5 border border-3 rounded rounded-4">
+    <div class="row gx-4 gx-lg-5 align-items-center">
+        <div class="col-md-6 border-end">
+          <%= image_tag @stub.stub_image.url, class: 'card-img-top mb-5 mb-md-0', size: '150x450' %>
+        </div>
+        <div class="col-md-6 text-decoration-underline">
+            <div class="mb-3">
+                <div class="display-5 fw-bolder fs-2"><%= @stub.title %>
+                <%= render 'crud_menus', stub: @stub %></div>
+            </div>
+            <div class="mb-3">
+                <p>Date:<%= @stub.date %></p>
+            </div>
+            <div class="mb-3">
+                <p>Address:<%= @stub.address %></p>
+            </div>
+            <div class="mb-3">
+                <p>category:<%= I18n.t('categories.' + @stub.category.name) %></p>
+            </div>
+            <div class="mb-3">
+                <p>Memo:<br><%= @stub.memo %></p>
+            </div>
+            <div class="mb-3">
+                <p>User:<%= @stub.user.name %></p>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
