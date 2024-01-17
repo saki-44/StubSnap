@@ -18,7 +18,7 @@
             <div class="dropdown-menu dropdown-menu-left">
               <div class="dropdown-item"><%= current_user.name %></div>
               <div class="dropdown-divider"></div>
-              <%= link_to 'My Stubs', '#', class: 'dropdown-item' %>
+              <%= link_to 'My Page', my_page_stubs_path, class: 'dropdown-item' %>
               <%= link_to 'プロフィール', '#', class: 'dropdown-item' %>
               <%= link_to 'いいね一覧', '#', class: 'dropdown-item' %>
               <%= link_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', data: { "turbo-method": :delete } %>

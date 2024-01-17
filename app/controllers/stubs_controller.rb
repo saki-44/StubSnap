@@ -2,7 +2,12 @@ class StubsController < ApplicationController
   before_action :find_stub, only: [:edit, :update, :destroy]
 
   def index
-    @stubs = Stub.public_stubs.includes(:user).order(created_at: :desc)
+    @stubs = Stub.published.includes(:user).order(created_at: :desc)
+  end
+
+  def my_page
+    @stubs = current_user.stubs.includes(:user).order(created_at: :desc)
+    render :index
   end
 
   def new
@@ -14,7 +19,7 @@ class StubsController < ApplicationController
     @stub = current_user.stubs.build(stub_params)
     @categories = Category.all
     if @stub.save
-      redirect_to stubs_path, success: t('defaults.message.created', item: Stub.model_name.human)
+      redirect_to my_page_stubs_path, success: t('defaults.message.created', item: Stub.model_name.human)
     else
       flash.now['danger'] = t('defaults.message.not_created', item: Stub.model_name.human)
       render :new

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_15_000756) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_17_010815) do
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_15_000756) do
     t.string "title", null: false
     t.string "address"
     t.text "memo"
-    t.boolean "public", default: false, null: false
+    t.integer "status", default: 0
     t.integer "user_id", null: false
     t.integer "category_id", null: false
     t.datetime "created_at", null: false
