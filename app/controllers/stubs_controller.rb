@@ -45,14 +45,14 @@ class StubsController < ApplicationController
 
   def destroy
     @stub.destroy!
-    redirect_to stubs_path, status: :see_other, success: t('defaults.message.deleted', item: Stub.model_name.human)
+    redirect_back_or_to my_page_stubs_path, status: :see_other, success: t('defaults.message.deleted', item: Stub.model_name.human)
   end
 
 
   private
 
   def stub_params
-    params.require(:stub).permit(:title, :address, :memo, :public, :category_id, :stub_image, :stub_image_cache, :date)
+    params.require(:stub).permit(:title, :address, :memo, :status, :category_id, :stub_image, :stub_image_cache, :date)
   end
 
   def find_stub

@@ -37,10 +37,11 @@
       <%= f.text_area :memo, class: 'form-control', rows: 6 %>
     </div>
     <div class="col-md-6">
-    <%= f.label :status %><br>
-    <%= f.radio_button :status, 'published' %> <%= f.label :status, t('activerecord.attributes.stub.published'), value: 'published' %>
-    <%= f.radio_button :status, 'unpublished' %> <%= f.label :status, t('activerecord.attributes.stub.unpublished'), value: 'unpublished' %>
-  </div>
+      <%= f.label :status %><br>
+      <% Stub.statuses.each do |key, value| %>
+        <%= f.radio_button :status, key %>
+        <%= f.label "status_#{key}", I18n.t("activerecord.attributes.stub.statuses.#{key}") %>
+      <% end %>
     </div>
       <%= f.submit class: 'btn btn-primary' %>
   </div>

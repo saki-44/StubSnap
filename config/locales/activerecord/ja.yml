@@ -15,8 +15,9 @@ ja:
         address: '場所'
         memo: 'メモ'
         status: '公開状況'
-        unpublished: '非公開'
-        published: '公開'
+        statuses:
+          unpublished: '非公開'
+          published: '公開'
         stub_image: '半券画像'
         date: '日付'
         category_id: 'カテゴリー名'

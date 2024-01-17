@@ -3,7 +3,7 @@
   <div class="container px-4 px-lg-5 my-5 border border-3 rounded rounded-4">
     <div class="row gx-4 gx-lg-5 align-items-center">
         <div class="col-md-6 border-end">
-          <%= image_tag @stub.stub_image.url, class: 'card-img-top mb-5 mb-md-0', size: '150x450' %>
+            <%= image_tag @stub.stub_image.url, class: 'card-img-top mb-5 mb-md-0', size: '150x450' %>
         </div>
         <div class="col-md-6 text-decoration-underline">
             <div class="mb-3">
@@ -23,7 +23,7 @@
                 <p>Memo:<br><%= @stub.memo %></p>
             </div>
             <div class="mb-3">
-                <p>Staus:<%= @stub.status %></p>
+                <p>Status:<%= I18n.t("activerecord.attributes.stub.statuses.#{@stub.status}") %></p>
             </div>
             <div class="mb-3">
                 <p>User:<%= @stub.user.name %></p>
