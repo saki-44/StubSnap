@@ -55,6 +55,7 @@ gem 'bootstrap', '~> 5.3', '>= 5.3.1'
 gem 'bootstrap_form'
 gem "aws-sdk-s3", require: false
 gem 'carrierwave'
+gem "enum_help"
 gem 'fog-aws'
 
 gem 'rails-i18n'

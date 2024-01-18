@@ -24,7 +24,7 @@
     <div class="col-12">
       <div class="row">
         <% if @stubs.present? %>
-          <%= render @stubs %>
+          <%= render partial: 'stub', collection: @stubs %>
         <% else %>
           <p><%= t('.no_result') %></p>
         <% end %>

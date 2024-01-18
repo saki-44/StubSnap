@@ -123,6 +123,8 @@ GEM
       reline (>= 0.3.1)
     dockerfile-rails (1.5.12)
       rails (>= 3.0.0)
+    enum_help (0.0.19)
+      activesupport (>= 3.0.0)
     erubi (1.12.0)
     excon (0.109.0)
     execjs (2.9.1)
@@ -351,6 +353,7 @@ DEPENDENCIES
   carrierwave
   debug
   dockerfile-rails (>= 1.5)
+  enum_help
   faker
   fog-aws
   importmap-rails

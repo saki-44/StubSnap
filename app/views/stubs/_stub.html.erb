@@ -1,6 +1,7 @@
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="stub-id-<%= stub.id %>">
     <div class="card">
+      <%= I18n.t("activerecord.attributes.stub.statuses.#{stub.status}") %>
       <%= link_to stub_path(stub) do %>
         <%= image_tag stub.stub_image_url, class: 'card-img-top', size: '100x300' %>
       <% end %>

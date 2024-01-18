@@ -55,7 +55,7 @@ ja:
     other: "その他"
   forms:
     labels:
-      category: "カテゴリ"
+      category: "カテゴリー"
     prompts:
-      select_category: "カテゴリを選択してください"
+      select_category: "カテゴリーを選択してください"
 
