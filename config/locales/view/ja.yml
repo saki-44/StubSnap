@@ -39,8 +39,14 @@ ja:
       title: 'stub詳細'
     edit:
       title: 'stub編集'
-    likes:
+    my_liking:
       title: 'お気に入り一覧'
+      no_result: 'お気に入りの半券がありません'
+  likes:
+    create:
+      success: 'お気に入り登録しました'
+    destroy:
+      success: 'お気に入り登録を外しました'
   profiles:
     show:
       title: 'プロフィール'

@@ -7,8 +7,11 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[new create]
   resources :stubs do
+    resource :likes, only: %i[create destroy]
     collection do
-      get :my_page
+      get 'my_page'
+      get 'my_liking'
     end
   end
+  #resources :likes, only: %i[create destroy]
 end
