@@ -8,7 +8,13 @@
       <div class="card-body">
         <h5 class="card-title">
           <%= stub.title %>
-          <%= render 'crud_menus', stub: stub if current_user.own?(stub) %>
+          <% if current_user.own?(stub) %>
+            <%= render 'crud_menus', stub: stub %>
+          <% else %>
+            <span id="js-like-button-for-stub-<%= stub.id %>" data-turbo-frame="js-like-button-for-stub-<%= stub.id %>">
+              <%= render 'likes/like', stub: stub%>
+            </span>
+          <% end %>
         </h5>
         <ul class="list-inline">
           <li class="list-inline-item">

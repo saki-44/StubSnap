@@ -5,11 +5,6 @@ class StubsController < ApplicationController
     @stubs = Stub.published.includes(:user).order(created_at: :desc)
   end
 
-  def my_page
-    @stubs = current_user.stubs.includes(:user).order(created_at: :desc)
-    render :index
-  end
-
   def new
     @stub = Stub.new
     @categories = Category.all
@@ -48,6 +43,15 @@ class StubsController < ApplicationController
     redirect_back_or_to my_page_stubs_path, status: :see_other, success: t('defaults.message.deleted', item: Stub.model_name.human)
   end
 
+  def my_page
+    @stubs = current_user.stubs.includes(:user).order(created_at: :desc)
+    render :index
+  end
+
+  def my_liking
+    @stubs = current_user.likes.includes(:stub, :user).order(created_at: :desc).map(&:stub)
+    render :index
+  end
 
   private
 
