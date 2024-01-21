@@ -46,19 +46,13 @@ class StubsController < ApplicationController
 
   def my_page
     @q = current_user.stubs.ransack(params[:q])
-    @stubs = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
-    render :index
+    @my_stubs = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def my_liking
-    @q = current_user.likes.ransack(params[:q])
-    @stubs = @q.result(distinct: true).includes(stub: :user).order(created_at: :desc).map(&:stub)
-    @stubs = Kaminari.paginate_array(@stubs).page(params[:page])
-    render :index
-
-    #@stubs = current_user.likes.includes(stub: :user).order(created_at: :desc).map(&:stub)
-    #@stubs = Kaminari.paginate_array(@stubs).page(params[:page])
-    #render :index
+    @q = current_user.likes.joins(:stub).ransack(params[:q])
+    @liked_stubs = @q.result(distinct: true).includes(stub: :user).order(created_at: :desc).map(&:stub)
+    @liked_stubs = Kaminari.paginate_array(@liked_stubs).page(params[:page])
   end
 
   private
