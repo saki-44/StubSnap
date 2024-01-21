@@ -57,6 +57,7 @@ gem "aws-sdk-s3", require: false
 gem 'carrierwave'
 gem "enum_help"
 gem 'fog-aws'
+gem 'kaminari'
 
 gem 'rails-i18n'
 
