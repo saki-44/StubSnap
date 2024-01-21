@@ -13,5 +13,5 @@ Rails.application.routes.draw do
       get 'my_liking'
     end
   end
-  #resources :likes, only: %i[create destroy]
+  resource :profile, only: %i[show edit update]
 end
