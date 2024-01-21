@@ -3,6 +3,8 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    post: '登録'
+    edit: '編集'
     message:
       require_login: 'ログインして下さい'
       created: "%{item}を登録しました"
@@ -50,6 +52,8 @@ ja:
   profiles:
     show:
       title: 'プロフィール'
+    edit:
+      title: 'プロフィール編集'
   categories:
     museum: "美術館、博物館"
     exhibition: "展示会"

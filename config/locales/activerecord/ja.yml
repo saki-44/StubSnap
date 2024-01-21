@@ -9,7 +9,7 @@ ja:
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: '名前'
-        sns: 'ソーシャルメディア'
+        sns: 'SNS'
       stub:
         title: 'タイトル'
         address: '場所'
