@@ -1,9 +1,9 @@
-<div class="col-sm-12 col-lg-4 mb-3">
+<div class="col-sm-12 col-lg-3 mb-3">
   <div id="stub-id-<%= stub.id %>">
     <div class="card">
       <%= I18n.t("activerecord.attributes.stub.statuses.#{stub.status}") %>
       <%= link_to stub_path(stub) do %>
-        <%= image_tag stub.stub_image_url, class: 'card-img-top', size: '100x300' %>
+        <%= image_tag stub.stub_image_url, class: 'card-img-top', size: '120x230' %>
       <% end %>
       <div class="card-body">
         <h5 class="card-title">
@@ -16,20 +16,20 @@
             </span>
           <% end %>
         </h5>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            日付：<%= stub.date %>
+        <ul class="list-unstyled">
+          <li>
+            <%= stub.date %>
           </li>
-          <li class="list-inline-item float-end">
+          <li>
             <%= I18n.t('categories.' + stub.category.name) %>
           </li>
+          <li>
+            <%= stub.user.name %>
+          </li>
+          <li class="small text-muted float-end">
+            登録日：<%= stub.created_at.strftime("%Y-%m-%d") %>
+          </li>
         </ul>
-        <li class="list-inline-item">
-          <%= stub.user.name %>
-        </li>
-        <li class="float-end list-inline-item small text-muted">
-          登録日：<%= stub.created_at.strftime("%Y-%m-%d") %>
-        </li>
       </div>
     </div>
   </div>
