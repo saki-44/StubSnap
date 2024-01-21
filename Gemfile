@@ -62,6 +62,7 @@ gem 'kaminari'
 gem 'rails-i18n'
 
 gem 'pry'
+gem 'ransack'
 
 
 
