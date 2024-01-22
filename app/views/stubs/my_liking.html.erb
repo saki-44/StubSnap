@@ -5,10 +5,10 @@
       <!-- 検索フォーム -->
       <%= search_form_for @q, url: my_liking_stubs_path do |f| %>
         <div class="input-group mb-3">
+          <%= f.collection_select :stub_category_id_eq, @categories, :id, :translated_name, { include_blank: t('defaults.select_category') }, class: 'form-select' %>
           <%= f.search_field :stub_title_or_stub_memo_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
-          <div class="input-group-append">
-            <%= f.submit class: 'btn btn-primary' %>
-          </div>
+          
+          <%= f.submit class: "btn btn-primary" %>
         </div>
       <% end %>
     </div>
