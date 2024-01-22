@@ -1,0 +1,12 @@
+<%= search_form_for @q, url: url do |f| %>
+  <div class="d-flex">
+    <div class="input-group me-3 w-50"> 
+      <%= f.collection_select :category_id_eq, @categories, :id, :translated_name, { include_blank: t('defaults.select_category') }, class: 'form-select' %>
+    </div>
+
+    <div class="input-group">
+      <%= f.search_field :title_or_memo_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
+      <%= f.submit class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>

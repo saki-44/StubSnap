@@ -12,4 +12,13 @@ class Stub < ApplicationRecord
   def liked?(user)
     likes.where(user_id: user.id).exists?
   end
+
+  def self.ransackable_associations(auth_object = nil)
+    %w[category likes user]
+  end
+
+  def self.ransackable_attributes(auth_object = nil)
+    %w[memo title]
+  end
+
 end

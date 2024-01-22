@@ -3,14 +3,7 @@
   <div class="d-flex justify-content-center">
     <div class="col-md-6">
       <!-- 検索フォーム -->
-      <form>
-        <div class="input-group mb-3">
-          <input class="form-control" placeholder="検索ワード" type="search">
-          <div class="input-group-append">
-            <button type="submit" class="btn btn-primary">検索</button>
-          </div>
-        </div>
-      </form>
+       <%= render 'search_form', url: stubs_path %>
     </div>
   </div>
   <div class="add-stub d-flex justify-content-center">

@@ -2,7 +2,9 @@ class StubsController < ApplicationController
   before_action :find_stub, only: [:edit, :update, :destroy]
 
   def index
-    @stubs = Stub.published.includes(:user).order(created_at: :desc).page(params[:page])
+    @categories = Category.all
+    @q = Stub.ransack(params[:q])
+    @stubs = @q.result(distinct: true).published.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def new
@@ -44,14 +46,16 @@ class StubsController < ApplicationController
   end
 
   def my_page
-    @stubs = current_user.stubs.includes(:user).order(created_at: :desc).page(params[:page])
-    render :index
+    @categories = Category.all
+    @q = current_user.stubs.ransack(params[:q])
+    @my_stubs = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def my_liking
-    @stubs = current_user.likes.includes(stub: :user).order(created_at: :desc).map(&:stub)
-    @stubs = Kaminari.paginate_array(@stubs).page(params[:page])
-    render :index
+    @categories = Category.all
+    @q = current_user.likes.joins(:stub).ransack(params[:q])
+    @liked_stubs = @q.result(distinct: true).includes(stub: :user).order(created_at: :desc).map(&:stub)
+    @liked_stubs = Kaminari.paginate_array(@liked_stubs).page(params[:page])
   end
 
   private

@@ -5,6 +5,9 @@ ja:
     logout: 'ログアウト'
     post: '登録'
     edit: '編集'
+    search_word: '検索キーワード'
+    select_category: 'カテゴリーを選択'
+
     message:
       require_login: 'ログインして下さい'
       created: "%{item}を登録しました"
