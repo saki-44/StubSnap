@@ -28,7 +28,7 @@
     <div class="col-md-6">
       <%= f.label :category_id, I18n.t('forms.labels.category') %>
       <%= f.select :category_id, 
-      options_for_select(@categories.map { |c| [I18n.t("categories.#{c.name}"), c.id] }, @stub.category_id),
+      options_for_select(@categories.map { |c| [c.translated_name, c.id] }, @stub.category_id),
       { prompt: I18n.t('forms.prompts.select_category') },
       { class: 'form-control' } %>
     </div>

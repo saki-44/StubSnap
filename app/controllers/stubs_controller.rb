@@ -2,6 +2,7 @@ class StubsController < ApplicationController
   before_action :find_stub, only: [:edit, :update, :destroy]
 
   def index
+    @categories = Category.all
     @q = Stub.ransack(params[:q])
     @stubs = @q.result(distinct: true).published.includes(:user).order(created_at: :desc).page(params[:page])
   end
