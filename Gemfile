@@ -55,6 +55,7 @@ gem 'bootstrap', '~> 5.3', '>= 5.3.1'
 gem 'bootstrap_form'
 gem "aws-sdk-s3", require: false
 gem 'carrierwave'
+gem "config"
 gem "enum_help"
 gem 'fog-aws'
 gem 'kaminari'
@@ -80,6 +81,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "letter_opener_web"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
