@@ -6,6 +6,7 @@ class Stub < ApplicationRecord
 
   validates :title, presence: true, length: { maximum: 20 }
   validates :memo, length: { maximum: 65_535 }
+  validates :stub_image, presence: true
 
   enum status: { unpublished: 0, published: 1 }
 
