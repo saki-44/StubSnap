@@ -22,7 +22,7 @@ class UserSessionsController < ApplicationController
     redirect_to root_path, alert: 'すでにログインしています' if current_user
 
     @user = User.find_by(email: 'guest@example.com')
-    log_in(@user)
+    auto_login(@user)
     flash[:success] = 'ゲストユーザーでログインしました'
     redirect_to stubs_path
   end
