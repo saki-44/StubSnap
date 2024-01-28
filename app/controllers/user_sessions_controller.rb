@@ -1,5 +1,5 @@
 class UserSessionsController < ApplicationController
-  skip_before_action :require_login, only: %i[new create]
+  skip_before_action :require_login, only: %i[new create guest_login]
   
   def new; end
 
@@ -18,4 +18,12 @@ class UserSessionsController < ApplicationController
     redirect_to root_path, status: :see_other, success: t('.success')
   end
 
+  def guest_login
+    redirect_to root_path, alert: 'すでにログインしています' if current_user
+
+    @user = User.find_by(email: 'guest@example.com')
+    log_in(@user)
+    flash[:success] = 'ゲストユーザーでログインしました'
+    redirect_to stubs_path
+  end
 end
