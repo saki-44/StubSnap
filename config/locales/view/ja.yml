@@ -47,8 +47,11 @@ ja:
     edit:
       title: 'stub編集'
     my_liking:
-      title: 'お気に入り一覧'
+      title: 'お気に入り'
       no_result: 'お気に入りの半券がありません'
+    my_page:
+      title: 'マイページ'
+      no_result: '登録した半券がありません'
   likes:
     create:
       success: 'お気に入り登録しました'
