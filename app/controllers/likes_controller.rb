@@ -1,5 +1,6 @@
 class LikesController < ApplicationController
   before_action :set_stub, only: %i[create destroy]
+  before_action :login_as_regular_user
 
   def create
     @stub.likes.create(user: current_user)

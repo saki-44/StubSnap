@@ -6,4 +6,13 @@ class ApplicationController < ActionController::Base
     flash[:warning] = t('defaults.message.require_login')
     redirect_to login_path
   end
+
+  private
+  
+  def login_as_regular_user
+    if current_user&.email == "guest@example.com"
+      flash[:danger] = "ゲストユーザーでは操作できません"
+      redirect_back_or_to stubs_path
+    end
+  end
 end

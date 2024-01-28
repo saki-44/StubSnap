@@ -1,5 +1,6 @@
 class StubsController < ApplicationController
   before_action :find_stub, only: [:edit, :update, :destroy]
+  before_action :login_as_regular_user, except: %i[index my_page my_liking]
 
   def index
     @categories = Category.all
