@@ -1,8 +1,8 @@
 ja:
   defaults:
-    login: 'ログイン'
+    login: 'Login'
     register: '登録'
-    logout: 'ログアウト'
+    logout: 'Logout'
     post: '登録'
     edit: '編集'
     password_reset: 'パスワードリセット'
