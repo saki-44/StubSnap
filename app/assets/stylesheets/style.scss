@@ -5,6 +5,17 @@
 @import url("top.css");
 
 
+html, body {
+  font-size: 14px;
+  height: 100%;
+}
+
+footer {
+  top: 100vh;
+  width: 100%;
+  background: #f2faef;
+}
+
 .add-stub-icon{
   font-size: 1.5em;
 }
@@ -25,14 +36,15 @@
   background-color: #1d3658; /* ここに必要な色のコードを設定 */
 }
 
-.bi-person-circle {
+.bi-person-circle {     
   font-size: 3em;
   color: #f2faef;
-}
+} 
 
 .btn-danger {
   color:  #f2faef;
   background-color: #e63746;
+  border-color:  #f2faef;
 }
 
 .spacing-right {

@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg custom-bg-color">
     <div class="container">
       <%= link_to(stubs_path, class: 'navbar-brand') do %>
-        <%= image_tag('stubsnaplogo.png', alt: 'Stub Snap Logo', size: "80x80") %>
+        <%= image_tag('stubsnaplogo.png', alt: 'Stub Snap Logo', size: "60x60") %>
       <% end %>
       <button class='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent'
         aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
@@ -13,7 +13,7 @@
         <ul class='navbar-nav ms-auto main-nav align-items-center'>
           <li class="nav-item spacing-right">
             <%= link_to new_stub_path, class: "btn btn-danger" do %>
-              <i class="bi bi-plus-circle add-stub-icon"></i> Stub登録
+              + Stub 登録
             <% end %>
           </li>
           <li class="nav-item dropdown">
