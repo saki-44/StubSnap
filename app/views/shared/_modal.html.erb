@@ -1,0 +1,89 @@
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="termsModalLabel">
+          <%= t('modals.terms.title') %>
+          <%= link_to terms_path, class: 'm-2', target: '_blank', style: 'color: inherit; text-decoration: none;' do %>
+            <i class="far fa-share-square"></i>
+          <% end %>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<%= t('defaults.close') %>"></button>
+      </div>
+      <div class="modal-body" style="font-size: 1rem;">
+        <%= render 'modals/terms' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          <%= t('defaults.close') %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="privacyPolicyModalLabel">
+          <%= t('modals.privacy_policy.title') %>
+          <%= link_to privacy_policy_path, class: 'm-2', target: '_blank', style: 'color: inherit; text-decoration: none;' do %>
+            <i class="far fa-share-square"></i>
+          <% end %>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<%= t('defaults.close') %>"></button>
+      </div>
+      <div class="modal-body" style="font-size: 1rem;">
+        <%= render 'modals/privacy_policy' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          <%= t('defaults.close') %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="developerModal" tabindex="-1" aria-labelledby="developerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="developerModalLabel">
+          <%= t('modals.developer.title') %>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<%= t('defaults.close') %>"></button>
+      </div>
+      <div class="modal-body" style="font-size: 1rem;">
+        <%= render 'modals/developer' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          <%= t('defaults.close') %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">
+          <%= t('defaults.message_to_developer') %>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<%= t('defaults.close') %>"></button>
+      </div>
+      <div class="modal-body" style="font-size: 1rem;">
+        <%= render 'modals/contact' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          <%= t('defaults.close') %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
