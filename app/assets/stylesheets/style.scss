@@ -94,3 +94,40 @@ footer {
   color: #FF0000; /* 赤色に変更 */
   font-size: 0.8rem; /* サイズを小さく */
 }
+
+/*_stub*/
+.card-header {
+  border-bottom: none; /* ボーダーを消す */
+  background-color: white; /* card-bodyと同じ背景色にする */
+  
+}
+
+.status {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 1em 0 .75em;
+  background-color: #a7dadc;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s; 
+}
+
+.category {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 1em 0 .75em;
+  background-color: #447a9c;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
