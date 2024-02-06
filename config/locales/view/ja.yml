@@ -1,13 +1,14 @@
 ja:
   defaults:
-    login: 'Login'
+    login: 'ログイン'
     register: '登録'
-    logout: 'Logout'
+    logout: 'ログアウト'
     post: '登録'
     edit: '編集'
     password_reset: 'パスワードリセット'
     search_word: '検索キーワード'
     select_category: 'カテゴリーを選択'
+    password: '英数字6文字以上'
 
     message:
       require_login: 'ログインして下さい'
@@ -30,7 +31,7 @@ ja:
       fail: 'ログインに失敗しました'
     new:
       title: 'ログイン'
-      to_register_page: '登録ページへ'
+      to_register_page: 'ユーザー登録する'
       password_forget: 'パスワードをお忘れの方はこちら'
       guest_login: 'ゲストユーザーとして試してみる'
     destroy:

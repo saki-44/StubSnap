@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
       <div class="col-xl-5 col-md-8">
         <div class="bg-white rounded shadow-5-strong p-5">
-          <div class="row justify-content-center mb-4"><%= t '.title' %></div>
+          <h4 class="row justify-content-center mb-4"><%= t '.title' %></h4>
           <%= form_with model: @user, local: true do |f| %>
           <%= render 'shared/error_messages', object: f.object %>
           <!-- name input -->
@@ -22,7 +22,7 @@
             <!-- Password input -->
             <div class="form-group mb-4">
               <%= f.label :password %>
-              <%= f.password_field :password, class: 'form-control' %>
+              <%= f.password_field :password, class: 'form-control', placeholder: t('defaults.password') %>
             </div>
 
             <!-- Password confirmation input -->
