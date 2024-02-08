@@ -11,6 +11,7 @@
   <div class="row mt-5">
     <div class="col-12">
       <div class="row">
+        <h3 class="row mb-4 fw-bold" style="color: #1d3658;"><%= t '.title' %></h3>
         <% if @stubs.present? %>
           <%= render partial: 'stub', collection: @stubs %>
         <% else %>
