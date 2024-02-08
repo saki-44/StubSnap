@@ -1,29 +1,37 @@
-<%= content_for(:title, t('.title')) %>
-<div class="container">
-  <div class="row">
-    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-      <h1><%= t '.title' %></h1>
-      <%= form_with model: @user, url: password_reset_path(@token), local: true do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
+<% content_for(:title, t('.title')) %>
+<div class="mask d-flex align-items-center h-100" style="background-color: #f2faef;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-5 col-md-8">
+        <div class="bg-white rounded shadow-5-strong p-5">
+          <h4 class="row justify-content-center mb-4"><%= t '.title' %></h4>
+          <%= form_with model: @user, url: password_reset_path(@token), local: true do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+            <!-- Email -->
+            <div class="form-group mb-4">
+              <%= f.label :email, User.human_attribute_name(:email) %>
+              <%= @user.email %>
+            </div>
 
-        <div class="form-group">
-          <%= f.label :email %>
-          <%= @user.email %>
+            <!-- new password input -->
+            <div class="form-group mb-4">
+              <%= f.label :password %>
+              <%= f.password_field :password, class: 'form-control' %>
+            </div>
+
+            <!-- new password confirmation input -->
+            <div class="form-group mb-4">
+              <%= f.label :password_confirmation %>
+              <%= f.password_field :password_confirmation, class: 'form-control' %>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group mb-4">
+              <%= f.submit class: 'btn btn-register', style: 'width: 100%;' %>
+            </div>
+          <% end %>
         </div>
-        <div class="form-group">
-          <%= f.label :password %>
-          <%= f.password_field :password, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation, class: 'form-control' %>
-        </div>
-        <div class="actions">
-          <p class="text-center">
-          <%= f.submit class: 'btn btn-primary' %>
-          </p>
-        </div>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>

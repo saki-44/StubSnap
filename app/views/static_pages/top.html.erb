@@ -1,7 +1,14 @@
-<% provide(:title, "Top") %>
-<div class='top-wrapper'>
-  <div class='top-inner-text'>
-    <h1>StubSnap</h1>
-      <%= link_to "Sign up now!", new_user_path, class: "btn btn-lg btn-primary" %>
-  </div>
-</div>
+<!-- Masthead-->
+<header class="masthead">
+    <div class="left-column">
+        <%= image_tag 'top_image.png', class: 'top_image', size: "500x500" %>
+    </div>
+    <div class="right-column">
+        <div class="masthead-subheading">思い出のチケットの半券を保存・管理・共有できる</div>
+        <div class="masthead-heading">
+            <%= image_tag 'stubsnaplogo.png', class: 'logo', size: "200x200" %>
+        </div>
+        <%= link_to 'ゲストとしてログイン', guest_login_path, class: "btn btn-guestlogin" %>
+        </a>
+    </div>
+</header>

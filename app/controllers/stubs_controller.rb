@@ -43,7 +43,7 @@ class StubsController < ApplicationController
 
   def destroy
     @stub.destroy!
-    redirect_back_or_to my_page_stubs_path, status: :see_other, success: t('defaults.message.deleted', item: Stub.model_name.human)
+    redirect_back_or_to my_page_stubs_path, success: t('defaults.message.deleted', item: Stub.model_name.human)
   end
 
   def my_page

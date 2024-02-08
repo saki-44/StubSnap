@@ -8,6 +8,7 @@ ja:
     password_reset: 'パスワードリセット'
     search_word: '検索キーワード'
     select_category: 'カテゴリーを選択'
+    password: '英数字6文字以上'
 
     message:
       require_login: 'ログインして下さい'
@@ -30,7 +31,7 @@ ja:
       fail: 'ログインに失敗しました'
     new:
       title: 'ログイン'
-      to_register_page: '登録ページへ'
+      to_register_page: 'ユーザー登録する'
       password_forget: 'パスワードをお忘れの方はこちら'
       guest_login: 'ゲストユーザーとして試してみる'
     destroy:
@@ -47,8 +48,11 @@ ja:
     edit:
       title: 'stub編集'
     my_liking:
-      title: 'お気に入り一覧'
+      title: 'お気に入り'
       no_result: 'お気に入りの半券がありません'
+    my_page:
+      title: 'マイページ'
+      no_result: '登録した半券がありません'
   likes:
     create:
       success: 'お気に入り登録しました'

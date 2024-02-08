@@ -1,11 +1,17 @@
 <div class="d-flex float-end">
   <% if stub.liked?(current_user) %>
-    <%= link_to stub_likes_path(stub), data: { turbo_method: :delete }, remote: true, id: "js-like-button-for-stub-#{stub.id}", class: "like-button" do %>
-      <i class="bi bi-star-fill"></i><%= stub.likes.count %>
+    <%= link_to stub_likes_path(stub), data: { turbo_method: :delete }, remote: true, id: "js-like-button-for-stub-#{stub.id}", class: "like-button text-decoration-none" do %>
+      <i class="bi bi-heart-fill"></i>
+      <span class="like-count">
+        <%= stub.likes.count %>
+      </span>
     <% end %>
   <% else %>
-    <%= link_to stub_likes_path(stub), data: { turbo_method: :post }, remote: true, id: "js-like-button-for-stub-#{stub.id}", class: "like-button" do %>
-      <i class="bi bi-star"></i><%= stub.likes.count %>
+    <%= link_to stub_likes_path(stub), data: { turbo_method: :post }, remote: true, id: "js-like-button-for-stub-#{stub.id}", class: "like-button text-decoration-none" do %>
+      <i class="bi bi-heart"></i>
+      <span class="like-count">
+        <%= stub.likes.count %>
+      </span>
     <% end %>
   <% end %>
 </div>

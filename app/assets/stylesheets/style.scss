@@ -1,0 +1,133 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url("https://unpkg.com/sanitize.css");
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap');
+@import url("top.css");
+
+
+html, body {
+  font-size: 14px;
+  height: 100%;
+}
+
+footer {
+  top: 100vh;
+  width: 100%;
+  background: #f2faef;
+}
+
+.add-stub-icon{
+  font-size: 1.5em;
+}
+
+.card-img-top {
+  padding: 10px; /* 余白を10px追加 */
+  object-fit: contain; /* 画像のアスペクト比を保ちつつ枠に収める */
+}
+
+.add-stub {
+  margin-bottom: 5px; 
+}
+
+
+
+/*　ヘッダー */
+.custom-bg-color {
+  background-color: #1d3658; /* ここに必要な色のコードを設定 */
+}
+
+.bi-person-circle {     
+  font-size: 3em;
+  color: #f2faef;
+} 
+
+.btn-danger {
+  color:  #f2faef;
+  background-color: #e63746;
+  border-color:  #f2faef;
+}
+
+.spacing-right {
+  margin-right: 20px; /* ここに適切な間隔を設定 */
+}
+
+/* before login ヘッダー*/
+
+.btn-login {
+  color: #1d3658;
+  background-color: #f2faef;
+}
+
+.btn-login:hover {
+  background-color: #cad0c8;
+}
+
+.btn-register{
+  color: #f2faef;
+  background-color: #447a9c
+}
+
+.btn-register:hover {
+  color: #f2faef;
+  background-color:   #516d7e
+}
+
+/* _crud_menus */
+.bi-pencil-fill {
+  color: #447a9c;
+}
+
+.bi-trash-fill {
+  color: #447a9c;
+}
+
+/* _like */
+.bi-heart-fill{
+  color: #e63746;
+}
+
+.bi-heart{
+  color: #e63746;
+}
+
+.like-count {
+  color: #FF0000; /* 赤色に変更 */
+  font-size: 0.8rem; /* サイズを小さく */
+}
+
+/*_stub*/
+.card-header {
+  border-bottom: none; /* ボーダーを消す */
+  background-color: white; /* card-bodyと同じ背景色にする */
+  
+}
+
+.status {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 1em 0 .75em;
+  background-color: #a7dadc;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s; 
+}
+
+.category {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 1em 0 .75em;
+  background-color: #447a9c;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}

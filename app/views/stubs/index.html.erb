@@ -1,21 +1,17 @@
 <% content_for(:title, t('.title')) %>
 <div class="container pt-3">
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center mt-4">
     <div class="col-md-6">
       <!-- 検索フォーム -->
-       <%= render 'search_form', url: stubs_path %>
+      <%= render 'search_form', url: stubs_path %>
     </div>
-  </div>
-  <div class="add-stub d-flex justify-content-center">
-    <%= link_to new_stub_path do %>
-      <i class="bi bi-plus-circle add-stub-icon">add stub</i>
-    <% end %>
   </div>
 
   <!-- 掲示板一覧 -->
-  <div class="row">
+  <div class="row mt-5">
     <div class="col-12">
       <div class="row">
+        <h3 class="row mb-4 fw-bold" style="color: #1d3658;"><%= t '.title' %></h3>
         <% if @stubs.present? %>
           <%= render partial: 'stub', collection: @stubs %>
         <% else %>

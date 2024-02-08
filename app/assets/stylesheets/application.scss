@@ -1,16 +1,6 @@
 @import "bootstrap";
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-@import "top";
 
-.add-stub-icon{
-  font-size: 3em;
-}
 
-.card-img-top {
-  padding: 10px; /* 余白を10px追加 */
-  object-fit: contain; /* 画像のアスペクト比を保ちつつ枠に収める */
-}
-
-.add-stub {
-  margin-bottom: 20px; 
+@media screen and (max-width: 767px) {
+  font-size: 2.0rem;
 }
