@@ -27,7 +27,6 @@ StubSnapはそんな管理が大変だけど思い出に残しておきたいチ
 ### MVP
 - 会員登録機能
 - Sorceryによるログイン・ログアウト機能
-- Googleアカウントログイン・ログアウト
 - ゲストログイン（閲覧のみ）
 - プロフィール機能（編集）
 - 半券一覧、詳細表示機能
@@ -35,19 +34,17 @@ StubSnapはそんな管理が大変だけど思い出に残しておきたいチ
 - 半券公開先設定機能（パブリック or プライベート）
 - 半券編集機能
 - 半券削除機能
-- カテゴリ投稿機能
-- カテゴリ編集機能
-- カテゴリ削除機能
 - いいね機能
 - いいね解除機能
-- マルチ検索・オートコンプリート（カテゴリ）
-- Twitter 共有機能
-- テスト機能
-
+- マルチ検索機能
 
 ### その後の機能
-* Google Maps API　を使用した位置情報入力機能
-* GoogleCloudVisionAPI の TextDetection　を使った画像認識機能（チケット半券情報の取得）
+- 並べ替え機能
+- 他のユーザーのプロフィール閲覧機能
+- Google Maps API　を使用した位置情報入力機能
+- Googleアカウントログイン・ログアウト
+- Twitter 共有機能
+- テスト機能
 
 ## 使用技術・ライブラリ（予定）
 - Ruby 3.2.2
@@ -55,9 +52,9 @@ StubSnapはそんな管理が大変だけど思い出に残しておきたいチ
 - ImageMagick
 - Sorcery
 - HTML
-- CSS tailwind
+- Bootstrap
 - Webアプリケーションサーバ fly.io
 - データベース PostgreSQL
 
 ## ER図
-<a href="https://gyazo.com/0e96b0f8de315924347d7916022c4e5f"><img src="https://i.gyazo.com/0e96b0f8de315924347d7916022c4e5f.png" alt="Image from Gyazo" width="718"/></a>
+<a href="https://gyazo.com/634833f8deefffd816c34e1f738b2597"><img src="https://i.gyazo.com/634833f8deefffd816c34e1f738b2597.png" alt="Image from Gyazo" width="1504"/></a>
