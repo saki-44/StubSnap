@@ -4,8 +4,8 @@ class StubImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  #storage :file
-  #storage :fog
+  # storage :file
+  # storage :fog
 
   if Rails.env.development?
     storage :file
@@ -22,8 +22,8 @@ class StubImageUploader < CarrierWave::Uploader::Base
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
-  def default_url(*args)
-    ActionController::Base.helpers.asset_path("sample.jpg")
+  def default_url(*_args)
+    ActionController::Base.helpers.asset_path('sample.jpg')
   end
   #   # For Rails 3.1+ asset pipeline compatibility:
   #   # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
@@ -46,7 +46,7 @@ class StubImageUploader < CarrierWave::Uploader::Base
   # Add an allowlist of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_allowlist
-    %w(jpg jpeg gif png webp)
+    %w[jpg jpeg gif png webp]
   end
 
   # Override the filename of the uploaded files:
